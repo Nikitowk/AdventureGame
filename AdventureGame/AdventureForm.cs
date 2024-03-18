@@ -14,16 +14,14 @@ namespace AdventureGame
     public partial class AdventureForm : Form
     {
         private RandomGenerator die = new RandomGenerator();
+        private Encounters encounters = new Encounters();
         public AdventureForm()
         {
             InitializeComponent();
 
             this.die = new RandomGenerator();
         }
-        private int steps = 0;
-        private bool encounter = false;
-        private bool walking = false;
-        private int encounterNum;
+
         private Random counter = new Random();
 
         private void btnExitGame_Click(object sender, EventArgs e)
@@ -39,30 +37,21 @@ namespace AdventureGame
 
         private void walkbtn_Click(object sender, EventArgs e)
         {
-            ArrayList checkNum = new ArrayList();
-            checkNum.Add(96);
-            checkNum.Add(97);
-            checkNum.Add(98);
-            checkNum.Add(99);
-            checkNum.Add(100);
-
-            walking = true;
-            while (walking == true)
+            counter.Next(1, 11);
+            string enc;
+            if (counter.Next(1, 11) > 5)
             {
-                int countNum = counter.Next(1,60);
-                while (!checkNum.Contains(countNum))
+                enc = Encounters.CheckEncounter();
+
+                if (enc.Equals("Attacked"))
                 {
-                    countNum = counter.Next(1,60);
-                    walkbtn.Enabled = false;
-                    steps++;
-                    if (checkNum.Contains(countNum)) 
-                    { 
-                        encounter = true;
-                    }
+                    checknumlbl.Text = enc;
                 }
-                if (encounter == true) break;
+                else 
+                {
+                    checknumlbl.Text = "waiting";
+                }
             }
-            walkbtn.Enabled = true;
         }
     }
 }

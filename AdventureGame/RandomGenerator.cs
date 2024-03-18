@@ -13,10 +13,6 @@ namespace AdventureGame
         public int encounterNum;
         private static Random rand = new Random();
 
-        //public Die() 
-        //{
-        //    this.RollD20();
-        //}
         public void RollD20() 
         {
             this.d20Value = rand.Next(1, 21);
