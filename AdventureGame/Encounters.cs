@@ -8,6 +8,9 @@ namespace AdventureGame
 {
     internal class Encounters
     {
+        public int enemyhealth = 25;
+        public int enemydmg = 5;
+
         public static string CheckEncounter() 
         {
             List<string> Encounter = new List<string>();
@@ -36,5 +39,10 @@ namespace AdventureGame
                 return enc = Encounter[3];
             }
         }
+        //public static int AttackEncounter() 
+        //{
+        //    //int attackdmg = 5;
+        //    return enemyhealth = 25;
+        //}
     }
 }

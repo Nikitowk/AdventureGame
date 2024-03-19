@@ -13,13 +13,15 @@ namespace AdventureGame
     /// </summary>
     public partial class AdventureForm : Form
     {
-        private RandomGenerator die = new RandomGenerator();
-        private Encounters encounters = new Encounters();
+
+        public int playerHealth = 100;
+        public int playerdmg = 10;
+        public int balance = 0;
+        public int steps = 0;
         public AdventureForm()
         {
             InitializeComponent();
-
-            this.die = new RandomGenerator();
+            healthNumlbl.Text = playerHealth.ToString();
         }
 
         private Random counter = new Random();
@@ -37,6 +39,8 @@ namespace AdventureGame
 
         private void walkbtn_Click(object sender, EventArgs e)
         {
+            steps++;
+            stepsCountlbl.Text = steps.ToString();
             counter.Next(1, 11);
             string enc;
             if (counter.Next(1, 11) > 5)
@@ -46,10 +50,21 @@ namespace AdventureGame
                 if (enc.Equals("Attacked"))
                 {
                     checknumlbl.Text = enc;
+                    AttackedEncounterForm aef = new AttackedEncounterForm(this);
+                    aef.Visible = true;
+                    moneyNumlbl.Text = balance.ToString();
                 }
-                else 
+                if (enc.Equals("Found a Town"))
                 {
-                    checknumlbl.Text = "waiting";
+                    checknumlbl.Text = enc;
+                }
+                if (enc.Equals("Found a Cave"))
+                {
+                    checknumlbl.Text = enc;
+                }
+                else if(enc.Equals("No Encounter"))
+                {
+                    checknumlbl.Text = enc;
                 }
             }
         }

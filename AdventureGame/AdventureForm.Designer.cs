@@ -47,9 +47,10 @@ namespace AdventureGame
             // 
             btnExitGame.AutoSize = true;
             btnExitGame.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExitGame.Location = new Point(694, 400);
+            btnExitGame.Location = new Point(607, 300);
+            btnExitGame.Margin = new Padding(3, 2, 3, 2);
             btnExitGame.Name = "btnExitGame";
-            btnExitGame.Size = new Size(94, 41);
+            btnExitGame.Size = new Size(82, 31);
             btnExitGame.TabIndex = 0;
             btnExitGame.Text = "Exit";
             btnExitGame.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@ namespace AdventureGame
             btnInventory.AutoSize = true;
             btnInventory.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInventory.ForeColor = Color.Blue;
-            btnInventory.Location = new Point(336, 348);
+            btnInventory.Location = new Point(294, 261);
+            btnInventory.Margin = new Padding(3, 2, 3, 2);
             btnInventory.Name = "btnInventory";
-            btnInventory.Size = new Size(114, 41);
+            btnInventory.Size = new Size(100, 31);
             btnInventory.TabIndex = 1;
             btnInventory.Text = "Inventory";
             btnInventory.UseVisualStyleBackColor = true;
@@ -73,9 +75,9 @@ namespace AdventureGame
             healthlbl.AutoSize = true;
             healthlbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             healthlbl.ForeColor = Color.Red;
-            healthlbl.Location = new Point(39, 31);
+            healthlbl.Location = new Point(34, 23);
             healthlbl.Name = "healthlbl";
-            healthlbl.Size = new Size(80, 28);
+            healthlbl.Size = new Size(65, 21);
             healthlbl.TabIndex = 2;
             healthlbl.Text = "Health:";
             // 
@@ -84,9 +86,9 @@ namespace AdventureGame
             healthNumlbl.AutoSize = true;
             healthNumlbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             healthNumlbl.ForeColor = Color.Red;
-            healthNumlbl.Location = new Point(120, 31);
+            healthNumlbl.Location = new Point(105, 23);
             healthNumlbl.Name = "healthNumlbl";
-            healthNumlbl.Size = new Size(36, 28);
+            healthNumlbl.Size = new Size(28, 21);
             healthNumlbl.TabIndex = 3;
             healthNumlbl.Text = "50";
             // 
@@ -95,9 +97,9 @@ namespace AdventureGame
             moneylbl.AutoSize = true;
             moneylbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             moneylbl.ForeColor = Color.FromArgb(0, 192, 0);
-            moneylbl.Location = new Point(39, 72);
+            moneylbl.Location = new Point(34, 54);
             moneylbl.Name = "moneylbl";
-            moneylbl.Size = new Size(82, 28);
+            moneylbl.Size = new Size(67, 21);
             moneylbl.TabIndex = 4;
             moneylbl.Text = "Money:";
             // 
@@ -106,9 +108,9 @@ namespace AdventureGame
             moneyNumlbl.AutoSize = true;
             moneyNumlbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             moneyNumlbl.ForeColor = Color.FromArgb(0, 192, 0);
-            moneyNumlbl.Location = new Point(120, 72);
+            moneyNumlbl.Location = new Point(105, 54);
             moneyNumlbl.Name = "moneyNumlbl";
-            moneyNumlbl.Size = new Size(24, 28);
+            moneyNumlbl.Size = new Size(19, 21);
             moneyNumlbl.TabIndex = 5;
             moneyNumlbl.Text = "0";
             // 
@@ -117,10 +119,9 @@ namespace AdventureGame
             walkbtn.AutoSize = true;
             walkbtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             walkbtn.ForeColor = Color.Blue;
-            walkbtn.Location = new Point(336, 283);
-            walkbtn.Margin = new Padding(3, 4, 3, 4);
+            walkbtn.Location = new Point(294, 212);
             walkbtn.Name = "walkbtn";
-            walkbtn.Size = new Size(86, 47);
+            walkbtn.Size = new Size(75, 35);
             walkbtn.TabIndex = 6;
             walkbtn.Text = "Walk";
             walkbtn.UseVisualStyleBackColor = true;
@@ -131,9 +132,9 @@ namespace AdventureGame
             stepslbl.AutoSize = true;
             stepslbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stepslbl.ForeColor = Color.Fuchsia;
-            stepslbl.Location = new Point(39, 113);
+            stepslbl.Location = new Point(34, 85);
             stepslbl.Name = "stepslbl";
-            stepslbl.Size = new Size(68, 28);
+            stepslbl.Size = new Size(55, 21);
             stepslbl.TabIndex = 7;
             stepslbl.Text = "Steps:";
             // 
@@ -142,26 +143,26 @@ namespace AdventureGame
             stepsCountlbl.AutoSize = true;
             stepsCountlbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stepsCountlbl.ForeColor = Color.Fuchsia;
-            stepsCountlbl.Location = new Point(120, 113);
+            stepsCountlbl.Location = new Point(105, 85);
             stepsCountlbl.Name = "stepsCountlbl";
-            stepsCountlbl.Size = new Size(24, 28);
+            stepsCountlbl.Size = new Size(19, 21);
             stepsCountlbl.TabIndex = 8;
             stepsCountlbl.Text = "0";
             // 
             // checknumlbl
             // 
             checknumlbl.AutoSize = true;
-            checknumlbl.Location = new Point(354, 200);
+            checknumlbl.Location = new Point(310, 150);
             checknumlbl.Name = "checknumlbl";
-            checknumlbl.Size = new Size(58, 20);
+            checknumlbl.Size = new Size(46, 15);
             checknumlbl.TabIndex = 9;
             checknumlbl.Text = "waiting";
             // 
             // AdventureForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(700, 338);
             Controls.Add(checknumlbl);
             Controls.Add(stepsCountlbl);
             Controls.Add(stepslbl);
@@ -172,6 +173,7 @@ namespace AdventureGame
             Controls.Add(healthlbl);
             Controls.Add(btnInventory);
             Controls.Add(btnExitGame);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AdventureForm";
             Text = "Adventure Game";
             ResumeLayout(false);
